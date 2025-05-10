@@ -1,0 +1,125 @@
+explanation.txt
+---------------
+
+This file explains the HTTP server code line by line for better understanding.
+
+1. Module Documentation:
+/**
+ * Robust HTTP server with logging, security, and graceful shutdown.
+ * @module server
+ * @author Kwanele
+ * @version 2.1.0
+ */
+- This is JSDoc documentation explaining what the module does, who wrote it, and its version.
+
+2. Import Dependencies:
+const http = require("http");
+const httpStatus = require("http-status-codes");
+const logger = require("./logger");
+- Imports Node's built-in HTTP module
+- Imports HTTP status codes package for readable status codes
+- Imports a custom logger module (assumed to be in the same directory)
+
+3. Server Configuration:
+const PORT = process.env.PORT || 3000;
+- Sets the server port from environment variable or defaults to 3000
+
+4. Rate Limiting Setup:
+const ipHits = {};
+const WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+const MAX_HITS = 100;
+- Creates an empty object to store IP addresses and hit counts
+- Sets a 15-minute window for rate limiting
+- Sets maximum allowed hits (100) per IP in the window
+
+5. Rate Limit Cleanup:
+setInterval(() => {
+  for (let ip in ipHits) {
+    if (Date.now() - ipHits[ip].start > WINDOW_MS) delete ipHits[ip];
+  }
+}, WINDOW_MS);
+- Cleans up old IP entries every 15 minutes to prevent memory leaks
+
+6. Security Headers Function:
+function setSecurityHeaders(res) {
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("X-Frame-Options", "DENY");
+  res.setHeader("X-XSS-Protection", "1; mode=block");
+  res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+}
+- Sets various security headers to protect against common web vulnerabilities
+
+7. Server Creation:
+const server = http.createServer((req, res) => {
+- Creates an HTTP server with request/response handlers
+
+8. Request Handling:
+try {
+  const ip = req.socket.remoteAddress;
+  logger.info(`${req.method} ${req.url} – Incoming from ${ip}`);
+- Starts try-catch block for error handling
+- Gets client IP address
+- Logs the incoming request with method, URL, and IP
+
+9. Rate Limiting Implementation:
+if (req.url === "/login") {
+  // ... rate limiting logic ...
+}
+- Only applies rate limiting to /login route
+- Tracks hits per IP
+- Returns 429 (Too Many Requests) if limit exceeded
+- Logs rate limit violations
+
+10. Security Headers Application:
+setSecurityHeaders(res);
+- Calls the security headers function for all responses
+
+11. Route Handlers:
+- /health route: Returns 200 OK with JSON status
+- / route: Returns HTML welcome message
+- 404 Not Found: For all other routes
+
+12. Error Handling:
+catch (err) {
+  logger.error(`Server error: ${err.message}`);
+  res.writeHead(httpStatus.INTERNAL_SERVER_ERROR);
+  res.end("Internal Server Error");
+}
+- Catches and logs any server errors
+- Returns 500 Internal Server Error to client
+
+13. Graceful Shutdown:
+const shutdown = () => {
+  logger.info("Shutting down gracefully...");
+  server.close(() => {
+    logger.info("Server closed.");
+    process.exit(0);
+  });
+};
+- Defines shutdown procedure
+- Logs shutdown process
+- Closes server properly before exiting
+
+14. Process Event Handlers:
+process.on("SIGTERM", shutdown);
+process.on("SIGINT", shutdown);
+process.on("uncaughtException", (err) => { ... });
+process.on("unhandledRejection", (err) => { ... });
+- Handles termination signals (SIGTERM, SIGINT)
+- Catches unhandled exceptions and promise rejections
+- Ensures proper shutdown in all cases
+
+15. Server Startup:
+server.listen(PORT, () => {
+  logger.info(`Server started on port ${PORT}`);
+});
+- Starts the server on specified port
+- Logs successful startup
+
+Key Features:
+- Rate limiting for /login route
+- Security headers for all responses
+- Comprehensive error handling
+- Graceful shutdown procedure
+- Detailed logging
+- Environment variable configuration

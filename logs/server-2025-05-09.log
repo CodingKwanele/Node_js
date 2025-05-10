@@ -1,0 +1,11 @@
+2025-05-09 20:41:30 [INFO] Server started on port 3000
+2025-05-09 20:42:13 [INFO] GET / – Incoming from ::1
+2025-05-09 20:42:13 [INFO] Response sent (25 bytes)
+2025-05-09 20:42:13 [INFO] GET /favicon.ico – Incoming from ::1
+2025-05-09 20:42:16 [INFO] GET / – Incoming from ::1
+2025-05-09 20:42:16 [INFO] Response sent (25 bytes)
+2025-05-09 20:42:16 [INFO] GET / – Incoming from ::1
+2025-05-09 20:42:16 [INFO] Response sent (25 bytes)
+2025-05-09 20:42:38 [INFO] GET / – Incoming from ::1
+2025-05-09 20:42:38 [INFO] Response sent (25 bytes)
+2025-05-09 20:47:17 [INFO] Server started on port 3000
