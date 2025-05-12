@@ -1,0 +1,194 @@
+/* confetti_cuisine.css */
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Site Title */
+.site-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.site-title .confetti {
+  color: #E91E63;
+}
+
+.site-title .cuisine {
+  color: #3F51B5;
+}
+
+/* Icon Box in Features */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #3F51B5;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Card Hover Effect */
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animate on Scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Testimonial Card */
+.testimonial-card p {
+  font-style: italic;
+}
+
+/* Floating CTA Button */
+.floating-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Counter Styling */
+.counter {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Book Now Button */
+.book-now-btn {
+  font-weight: 600;
+}
+/* confetti_cuisine.css */
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Site Title */
+.site-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.site-title .confetti {
+  color: #E91E63;
+}
+
+.site-title .cuisine {
+  color: #3F51B5;
+}
+
+/* Decorative Icon on Contact Header */
+.confetti-decoration {
+  font-size: 2.5rem;
+  color: #3F51B5;
+}
+
+/* Icon Box in Features and Contact Info */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #3F51B5;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Card Hover Effect */
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animate on Scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Testimonial Card */
+.testimonial-card p {
+  font-style: italic;
+}
+
+/* Counter Styling */
+.counter {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Book Now Button */
+.book-now-btn {
+  font-weight: 600;
+}
+
+/* Floating CTA Button */
+.floating-cta .btn {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Social Links Styling */
+.social-links a {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-links a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Map Section */
+.ratio iframe {
+  border: 0;
+}
+
+/* Contact Form Alert */
+.card-body .alert {
+  margin-top: 1.5rem;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .site-title {
+    text-align: center;
+  }
+}

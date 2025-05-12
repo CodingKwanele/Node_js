@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Confetti Cuisine offers fun, interactive cooking classes for all skill levels. Learn from passionate chefs in a hands-on, enjoyable atmosphere.">
+  <title>Confetti Cuisine - Fun Cooking Classes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/confetti_cuisine.css" />
+</head>
+<body>
+  <header class="py-3 py-md-4 sticky-top bg-white shadow-sm">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <h1 class="site-title mb-3 mb-md-0">
+          <span class="confetti">CONFETTI</span>
+          <span class="cuisine">CUISINE</span>
+        </h1>
+        <nav class="navbar navbar-expand-md w-100 justify-content-end">
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav align-items-center">
+              <a class="nav-link active" href="#"><i class="fas fa-home me-2" aria-hidden="true"></i><span class="d-md-none">Home</span></a>
+              <a class="nav-link" href="#"><i class="fas fa-utensils me-2" aria-hidden="true"></i><span class="d-md-none">Courses</span></a>
+              <a class="nav-link" href="#"><i class="fas fa-envelope me-2" aria-hidden="true"></i><span class="d-md-none">Contact</span></a>
+              <a class="nav-link btn btn-primary ms-md-2 px-3 book-now-btn" href="#"><i class="fas fa-book me-1"></i> Book Now</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section py-5">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0 animate-on-scroll">
+            <h2 class="display-4 fw-bold mb-4">Discover the Joy of Cooking</h2>
+            <p class="lead mb-4">Join our fun, interactive cooking classes designed for all skill levels. Create delicious meals while having a blast!</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#" class="btn btn-primary btn-lg px-4">Explore Classes</a>
+              <a href="#" class="btn btn-outline-primary btn-lg px-4">Learn More</a>
+            </div>
+          </div>
+          <div class="col-lg-6 animate-on-scroll">
+            <div class="hero-image shadow-lg rounded-4 overflow-hidden">
+              <img src="/images/home.png" alt="Chefs cooking together" class="img-fluid" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-4 bg-primary text-white">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="counter display-4 fw-bold" data-target="5000">0</div>
+            <p>Happy Students</p>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="counter display-4 fw-bold" data-target="120">0</div>
+            <p>Classes Offered</p>
+          </div>
+          <div class="col-md-4">
+            <div class="counter display-4 fw-bold" data-target="98">0</div>
+            <p>Success Rate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+      <div class="container py-5">
+        <h2 class="text-center mb-5">Why Choose Confetti Cuisine?</h2>
+        <div class="row g-4">
+          <div class="col-md-4 animate-on-scroll">
+            <div class="card h-100 border-0 shadow-sm hover-effect">
+              <div class="card-body text-center p-4">
+                <div class="icon-box bg-primary mb-4">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <h3>Passionate Chefs</h3>
+                <p>Learn from industry professionals who love teaching as much as cooking.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 animate-on-scroll">
+            <div class="card h-100 border-0 shadow-sm hover-effect">
+              <div class="card-body text-center p-4">
+                <div class="icon-box bg-primary mb-4">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Hands-On Experience</h3>
+                <p>Get practical, real kitchen experience with all the tools you need.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 animate-on-scroll">
+            <div class="card h-100 border-0 shadow-sm hover-effect">
+              <div class="card-body text-center p-4">
+                <div class="icon-box bg-primary mb-4">
+                  <i class="fas fa-smile"></i>
+                </div>
+                <h3>Fun Atmosphere</h3>
+                <p>Our classes are designed to be enjoyable while you learn valuable skills.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">What Our Students Say</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4 animate-on-scroll">
+            <div class="testimonial-card p-4 shadow-sm rounded">
+              <div class="rating mb-3 text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="mb-4">"The pasta making class changed my life! So fun and educational."</p>
+              <div class="d-flex align-items-center">
+                <img src="/images/testimonial1.jpeg" alt="Sarah J." class="rounded-circle me-3" width="50" loading="lazy">
+                <div>
+                  <h6 class="mb-0">Sarah J.</h6>
+                  <small class="text-muted">Pastry Enthusiast</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 animate-on-scroll">
+            <div class="testimonial-card p-4 shadow-sm rounded">
+              <div class="rating mb-3 text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="mb-4">"I never thought I could cook until I took their beginner series. Highly recommend!"</p>
+              <div class="d-flex align-items-center">
+                <img src="/images/testimonial2.png" alt="Michael T." class="rounded-circle me-3" width="50" loading="lazy">
+                <div>
+                  <h6 class="mb-0">Michael T.</h6>
+                  <small class="text-muted">Home Cook</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 animate-on-scroll">
+            <div class="testimonial-card p-4 shadow-sm rounded">
+              <div class="rating mb-3 text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="mb-4">"Perfect date night activity! We learned to make sushi and had so much fun."</p>
+              <div class="d-flex align-items-center">
+                <img src="/images/testimonial3.png" alt="Jessica & Mark" class="rounded-circle me-3" width="50" loading="lazy">
+                <div>
+                  <h6 class="mb-0">Jessica & Mark</h6>
+                  <small class="text-muted">Couple's Class</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-dark text-white">
+      <div class="container text-center py-5">
+        <h2 class="mb-4">Ready to Start Your Culinary Journey?</h2>
+        <p class="lead mb-5">Join hundreds of happy students learning with Confetti Cuisine</p>
+        <a href="#" class="btn btn-primary btn-lg px-5 py-3">Book Your Class Today</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3 class="mb-4">Confetti Cuisine</h3>
+          <p>Making cooking fun, accessible, and delicious for everyone.</p>
+          <div class="social-icons mt-3">
+            <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3 class="mb-4">Quick Links</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Courses</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Gift Cards</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">About Us</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="mb-4">Newsletter</h3>
+          <p>Subscribe to get updates on new classes and special offers.</p>
+          <form class="mt-3" id="newsletterForm">
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Your email" aria-label="Your email" required>
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+            <div class="form-text text-white-50">We'll never share your email.</div>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4 bg-secondary">
+      <div class="text-center pt-2">
+        <p class="mb-0">&copy; 2023 Confetti Cuisine. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA Button -->
+  <div class="floating-cta d-md-none">
+    <a href="#" class="btn btn-primary rounded-pill shadow-lg px-4 py-3">
+      <i class="fas fa-book me-2"></i> Book Now
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/confettiCuisine.js"></script>
+  <script>
+    // Counter animation
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 200;
+      
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+        
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(animateCounters, 1);
+        } else {
+          counter.innerText = target;
+        }
+      });
+    }
+    
+    // Scroll animation trigger
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            if (entry.target.querySelector('.counter')) {
+              animateCounters();
+            }
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    }
+    
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      animateOnScroll();
+      
+      // Newsletter form submission
+      const newsletterForm = document.getElementById('newsletterForm');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Thanks for subscribing!');
+          newsletterForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
